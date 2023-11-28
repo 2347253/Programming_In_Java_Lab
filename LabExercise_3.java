@@ -1,4 +1,3 @@
-// Base class representing a generic player
 class Player {
     private String name;
     private int age;
@@ -14,17 +13,14 @@ class Player {
     }
 }
 
-// Base abstract class representing an Esports player
 abstract class EsportsPlayer extends Player {
     public EsportsPlayer(String name, int age) {
         super(name, age);
     }
 
-    // Abstract method to be implemented by subclasses
     public abstract void playGame();
 }
 
-// Subclass representing a Counter-Strike: Global Offensive player
 class CsgoPlayer extends EsportsPlayer {
     private String role;
 
@@ -46,7 +42,6 @@ class CsgoPlayer extends EsportsPlayer {
     }
 }
 
-// Subclass representing a League of Legends player
 class LeagueOfLegendsPlayer extends EsportsPlayer {
     private String position;
 
@@ -68,19 +63,17 @@ class LeagueOfLegendsPlayer extends EsportsPlayer {
     }
 }
 
-// Demonstration class
 public class LabExercise_3 {
     public static void main(String[] args) {
-        // Creating instances of players
         CsgoPlayer csgoPlayer = new CsgoPlayer("Player1", 20, "Entry Fragger");
         LeagueOfLegendsPlayer lolPlayer = new LeagueOfLegendsPlayer("Player2", 22, "Mid Laner");
 
-        // Displaying player information
+        
         System.out.println("CS:GO Player Information:");
         csgoPlayer.displayInfo();
-        csgoPlayer.playGame(); // Using the abstract method
+        csgoPlayer.playGame(); 
         System.out.println("\nLeague of Legends Player Information:");
         lolPlayer.displayInfo();
-        lolPlayer.playGame(); // Using the abstract method
+        lolPlayer.playGame(); 
     }
 }
